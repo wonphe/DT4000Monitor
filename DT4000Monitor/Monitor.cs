@@ -164,7 +164,7 @@ namespace DT4000Monitor
                     {
                         if (!_firstRead)
                         {
-                            SendMessage("ConnectedSuccess..." + "\r" + "EnterBoxNo::");
+                            SendMessage("ConnectedSuccess..." + "\r" + "请输入盒号::");
                             Console.WriteLine("ReadCallback::" + "EquipmentAt" + DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss") + "ConnectedSuccess");// 首次连接成功！设备于 ：
                             _firstRead = true;
                         }
@@ -262,7 +262,7 @@ namespace DT4000Monitor
                             CmdSetBeeperTime();
 
                             msgResult = "盒号不存在::" + msg.Trim();
-                            SendMessage(msgResult + "\r" + "r请输入盒号::");
+                            SendMessage(msgResult + "\r" + "请输入盒号::");
                         }
                         else
                         {
